@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hajia Mamuna Waakye at Kasoa Obom. Authentic Ghanaian waakye for pickup and delivery.">
+  <title>Hajia Mamuna Waakye | Kasoa Obom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Hajia Mamuna Waakye home"><strong>HAJIA MAMUNA</strong><span>WAAKYE</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav id="mainNav"><a href="#home">Home</a><a href="#menu">Our Menu</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+      <button class="basket-btn shine-btn" id="basketBtn" aria-label="Open order basket">🛍️ <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">★ Authentic Ghanaian waakye in Kasoa</span>
+          <h1>The taste of home, <em>served fresh.</em></h1>
+          <p>Enjoy authentic waakye made with care, rich shito and all your favourite sides. Order for quick pickup or convenient delivery.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary shine-btn" href="#menu">Explore our menu →</a>
+            <a class="btn btn-whatsapp shine-btn" href="https://wa.me/233509333376?text=Hello%20Hajia%20Mamuna%20Waakye%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">WhatsApp 050 933 3376</a>
+          </div>
+          <div class="features"><span>✓ Freshly prepared</span><span>✓ Pickup available</span><span>✓ Delivery available</span><span>✓ Mobile Money available</span></div>
+        </div>
+        <div class="hero-image-wrap reveal">
+          <img class="hero-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Waakye_with_vegetables%2C_fish_and_egg_with_ripe_plantains.jpg/960px-Waakye_with_vegetables%2C_fish_and_egg_with_ripe_plantains.jpg" alt="Authentic Ghanaian waakye">
+          <div class="delivery-card"><b>🛵</b><div><small>WE OFFER</small><strong>Pickup & Delivery</strong></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-heading reveal"><span>GOOD FOOD, GOOD MOOD</span><h2>Choose your favourite</h2><p>Build your order, choose Mobile Money and send it directly to us on WhatsApp.</p></div>
+        <div class="menu-grid" id="menuGrid"></div>
+        <p class="notice">Menu prices are samples and can be changed in <strong>script.js</strong>.</p>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="photo-pair reveal"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Waakye.jpg?width=960" alt="Ghanaian waakye meal"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ghanaian%20waakye.jpg?width=719" alt="Waakye with accompaniments"></div>
+        <div class="about-copy reveal"><span class="section-label">FROM OUR KITCHEN TO YOU</span><h2>Made with care. Served with love.</h2><p>At Hajia Mamuna Waakye, every serving brings together rice and beans, rich shito and satisfying accompaniments for the comforting Ghanaian flavour you love.</p><div class="benefit-grid"><article><b>⏱</b><h3>Fresh every day</h3><p>Prepared for taste and satisfaction.</p></article><article><b>📱</b><h3>MoMo payment</h3><p>Confirm payment details safely on WhatsApp.</p></article></div></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact"><div class="container reveal"><span>HUNGRY ALREADY?</span><h2>Your next delicious meal is one message away.</h2><p>Contact us on WhatsApp, order for pickup or delivery and request confirmed Mobile Money payment details.</p><div class="contact-actions"><a class="btn btn-green shine-btn" href="https://wa.me/233509333376?text=Hello%20Hajia%20Mamuna%20Waakye%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">WhatsApp 050 933 3376</a><button class="btn btn-gold shine-btn" id="contactPayBtn">Pay with Mobile Money</button></div><div class="contact-details"><span>📍 Kasoa Obom, Ghana</span><a href="https://wa.me/233509333376" target="_blank" rel="noopener">☎ 050 933 3376 on WhatsApp</a></div></div></section>
+  </main>
+
+  <footer>© 2026 Hajia Mamuna Waakye. Fresh local flavour in Kasoa Obom.</footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart" id="cart" aria-hidden="true">
+    <div class="panel-head"><div><small>YOUR SELECTION</small><h2>Order basket</h2></div><button class="close-btn" id="closeCart" aria-label="Close basket">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer"><div class="total"><b>Total</b><strong id="cartTotal">GH₵0</strong></div><div class="cart-actions"><button class="btn btn-green shine-btn" id="whatsappOrder" disabled>Send order on WhatsApp →</button><button class="btn btn-gold shine-btn" id="momoOrder" disabled>Pay GH₵0 with MoMo</button></div><small>Delivery fee and order confirmation will be provided on WhatsApp.</small></div>
+  </aside>
+
+  <div class="modal-wrap" id="paymentModal" aria-hidden="true">
+    <div class="payment-modal">
+      <div class="panel-head"><div><small>MOBILE MONEY</small><h2>Confirm before paying</h2></div><button class="close-btn" id="closePayment" aria-label="Close payment window">×</button></div>
+      <div class="safety-note">For your safety, first contact us on WhatsApp to confirm the registered Mobile Money name and final amount. Do not send money until the account name has been confirmed.</div>
+      <div class="payment-box"><small>BUSINESS CONTACT</small><div><strong>050 933 3376</strong><button id="copyNumber">Copy</button></div><p id="paymentTotal"></p></div>
+      <a class="btn btn-green shine-btn full-btn" id="confirmPayment" target="_blank" rel="noopener">Confirm MoMo details on WhatsApp</a>
+      <p class="fine-print">A secure automatic payment gateway can be connected later using a verified merchant account and private server-side credentials.</p>
+    </div>
+  </div>
+
+  <script>document.addEventListener("error",function(e){if(e.target.tagName==="IMG"&&e.target.src!=="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Waakye_with_vegetables%2C_fish_and_egg_with_ripe_plantains.jpg/960px-Waakye_with_vegetables%2C_fish_and_egg_with_ripe_plantains.jpg")e.target.src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Waakye_with_vegetables%2C_fish_and_egg_with_ripe_plantains.jpg/960px-Waakye_with_vegetables%2C_fish_and_egg_with_ripe_plantains.jpg"},true);</script>
+  <script src="script.js"></script>
+</body>
+</html>
